@@ -1,0 +1,98 @@
+table Fact_lease_details
+	lineageTag: 08686e30-83e1-41b6-bd1b-135131bc15e7
+
+	column 'Lease ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4f0fbffc-c9d1-45a7-bde2-be28348ce109
+		summarizeBy: count
+		sourceColumn: Lease ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tenant ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6db91f2c-1454-413f-89eb-ff0e6cf1913a
+		summarizeBy: none
+		sourceColumn: Tenant ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lease Start Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e8db5de1-251b-4952-9171-d7e0ec327676
+		summarizeBy: none
+		sourceColumn: Lease Start Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Lease End Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f990646a-a07a-46ec-a474-d0d65ec9e5b5
+		summarizeBy: none
+		sourceColumn: Lease End Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Lease Term (Months)'
+		dataType: int64
+		formatString: 0
+		lineageTag: d3598475-829c-48c1-8e31-13376900c51f
+		summarizeBy: sum
+		sourceColumn: Lease Term (Months)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rent Amount (USD)'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0461af8f-f62e-4fe5-b5db-46f80e45f503
+		summarizeBy: sum
+		sourceColumn: Rent Amount (USD)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Payment History (USD)'
+		dataType: int64
+		formatString: 0
+		lineageTag: ee405623-14c1-4827-8b65-645dee134d54
+		summarizeBy: sum
+		sourceColumn: Payment History (USD)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Property ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3a1dbf1f-e63d-4c42-a448-bb2e5365175b
+		summarizeBy: none
+		sourceColumn: Property ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_lease_details = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Windows 10 Pro\Desktop\Data Analytics\Amdari\Tenant Retention Optimization Building an Interactive Power BI Dashboard for Residential Real Estate Excellence\lease_details.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Lease ID", Int64.Type}, {"Lease Start Date", type date}, {"Lease End Date", type date}, {"Lease Term (Months)", Int64.Type}, {"Rent Amount (USD)", Int64.Type}, {"Payment History (USD)", Int64.Type}, {"Property ID", Int64.Type}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Changed Type", {"Lease Start Date", "Lease End Date"}, #"tenant_information and Feedback", {"Lease Start Date", "Lease End Date"}, "tenant_information and Feedback", JoinKind.LeftOuter),
+				    #"Expanded tenant_information and Feedback" = Table.ExpandTableColumn(#"Merged Queries", "tenant_information and Feedback", {"Tenant ID"}, {"Tenant ID"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Expanded tenant_information and Feedback",{"Lease ID", "Tenant ID", "Lease Start Date", "Lease End Date", "Lease Term (Months)", "Rent Amount (USD)", "Payment History (USD)", "Property ID"})
+				in
+				    #"Reordered Columns"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

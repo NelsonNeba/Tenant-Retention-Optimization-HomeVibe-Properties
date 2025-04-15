@@ -1,0 +1,112 @@
+table 'End Date'
+	lineageTag: 889dc19a-0fff-4bdb-b590-42f1bbd765fc
+
+	measure Current_Occupancy_Rate = ```
+			
+			VAR TodayDate = TODAY()
+			
+			-- Count of occupied units (units with an active lease today)
+			VAR OccupiedUnits = 
+			    CALCULATE(
+			        DISTINCTCOUNT(Fact_lease_details[Lease ID]),
+			        Fact_lease_details[Lease Start Date] <= TodayDate,
+			        OR(
+			            ISBLANK(Fact_lease_details[Lease End Date]),  -- Still active
+			            Fact_lease_details[Lease End Date] > TodayDate  -- Lease is ongoing
+			        )
+			    )
+			
+			-- Count of total available units
+			VAR TotalUnits = DISTINCTCOUNT(property_information[Property ID])
+			
+			-- Calculate occupancy rate
+			RETURN 
+			    DIVIDE(OccupiedUnits, TotalUnits, 0)
+			
+			```
+		lineageTag: 66ab4e96-4a9f-4d58-8496-1e85bf58caa1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Date
+		formatString: General Date
+		lineageTag: adb71dce-60b5-42cd-a749-1d05b317ea37
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 36e61225-3879-4ec0-a8f8-0b9ce1d0d3bf
+			defaultHierarchy: LocalDateTable_da15556a-fa99-453a-8715-b9fb24ecc469.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: 7c6b4b28-9362-4d5a-9bae-e9addf1b2cbe
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		formatString: 0
+		lineageTag: 1d05ea0b-124a-4981-ae02-c30d5f008e46
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		formatString: 0
+		lineageTag: 35cd9ee8-d9d3-4fed-b95a-f6df61eba04a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		lineageTag: aaa81a8b-6744-4f39-891a-8a6acfdf5020
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthName]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayName
+		lineageTag: 4e383908-e6ef-43f5-9c0d-5bb11ec38012
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DayName]
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekDay
+		formatString: 0
+		lineageTag: 9fcbfe57-36f3-4019-8097-1a7c31778044
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [WeekDay]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'End Date' = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS(
+				    CALENDAR("2020-01-01","2025-12-31"),
+				    "Year",YEAR([Date]),
+				    "Month",MONTH([Date]),
+				    "Day",DAY([Date]),
+				    "MonthName",FORMAT([Date],"mmmm"),
+				    "DayName",FORMAT([Date],"dddd"),
+				    "WeekDay",WEEKDAY([Date])
+				)
+
+	annotation PBI_Id = dcaf4b13a2f54fe4861c7bb09f7ba65a
+

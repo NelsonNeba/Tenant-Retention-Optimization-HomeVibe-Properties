@@ -1,0 +1,101 @@
+table 'Measures Table'
+	lineageTag: 27f166ce-2032-4b0d-a1b1-a55f2c0d7725
+
+	measure Churn_Rate_Ended_Leases = ```
+			
+			VAR TodayDate = TODAY()
+			
+			-- Count of unique tenants whose lease has ended on or before today
+			VAR ChurnedCustomers = 
+			    CALCULATE(
+			        DISTINCTCOUNT(Fact_lease_details[Tenant ID]),
+			        Fact_lease_details[Lease End Date] <= TodayDate,
+			        NOT(ISBLANK(Fact_lease_details[Lease End Date]))  -- Exclude active leases
+			    )
+			
+			-- Count of all unique tenants who have ever had a lease
+			VAR TotalCustomers = 
+			    DISTINCTCOUNT(Fact_lease_details[Tenant ID])
+			
+			-- Calculate churn rate
+			RETURN 
+			    DIVIDE(ChurnedCustomers, TotalCustomers, 0)
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: eae77f63-67b9-4247-9343-2e4e129b784f
+
+	measure 'Average Rent' = AVERAGE(Fact_lease_details[Rent Amount (USD)] )
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 039b88e7-e324-4f27-94ce-faa0b40bb55d
+
+	measure 'Total Expected Rent' = SUMX(Fact_lease_details,Fact_lease_details[Rent Amount (USD)] * Fact_lease_details[Lease Term (Months)]   )
+		formatString: 0
+		lineageTag: c5df446b-b997-40e3-8ada-942824bfc7f1
+
+	measure 'Total Payment History' = SUM(Fact_lease_details[Payment History (USD)])
+		formatString: 0
+		lineageTag: 75eeaa7b-0a44-4336-93cc-ffd3a4bc3626
+
+	measure 'Rent Collection Performance' = DIVIDE([Total Payment History],[Total Expected Rent])
+		formatString: 0%;-0%;0%
+		lineageTag: 542d3a8e-2268-477b-bb7e-97377f975417
+
+	measure 'Churned Leases' = ```
+			
+			VAR TodayDate = TODAY()
+			RETURN 
+			    CALCULATE(
+			        DISTINCTCOUNT(Fact_lease_details[Tenant ID]),
+			        Fact_lease_details[Lease End Date] <= TodayDate,
+			        NOT(ISBLANK(Fact_lease_details[Lease End Date]))  -- Exclude active tenants
+			    )
+			
+			```
+		formatString: 0
+		lineageTag: 38b5ed33-7d71-4630-a41d-35dacb918cf5
+
+	measure 'Renewed Leases' = ```
+			
+			VAR TodayDate = TODAY()
+			RETURN 
+			    CALCULATE(
+			        DISTINCTCOUNT(Fact_lease_details[Lease ID]),
+			        Fact_lease_details[Lease Start Date] <= TodayDate,  -- Lease started before or on today
+			        OR(
+			            ISBLANK(Fact_lease_details[Lease End Date]),  -- Lease is ongoing
+			            Fact_lease_details[Lease End Date] > TodayDate  -- Lease ends in the future
+			        )
+			    )
+			
+			```
+		formatString: 0
+		lineageTag: 6bce0754-3645-462c-a8fc-f18190e78753
+
+	measure 'Renewal Rate' =
+			
+			VAR ExpiredLeases = COUNTROWS(FILTER('Fact_lease_details', 'Fact_lease_details'[Lease End Date] < TODAY()))
+			VAR RenewedLeases = COUNTROWS(FILTER('Fact_lease_details', 'Fact_lease_details'[Lease End Date] >= TODAY()))
+			RETURN DIVIDE(RenewedLeases, ExpiredLeases + RenewedLeases, 0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 0abefdbf-fb1e-414d-83e5-7ada8a0bef6d
+
+	column DummyColumn
+		isHidden
+		lineageTag: 274cbe10-2e23-4426-9b95-9eb0fc81eb45
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DummyColumn]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Measures Table' = calculated
+		mode: import
+		source =
+				DATATABLE(
+				    "DummyColumn",STRING,
+				    {{"DummyValue"}}
+				)
+
+	annotation PBI_Id = e7497a9064a34876a4d4fb6176b7f6b7
+

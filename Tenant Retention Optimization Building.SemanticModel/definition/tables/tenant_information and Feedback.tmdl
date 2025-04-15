@@ -1,0 +1,117 @@
+table 'tenant_information and Feedback'
+	lineageTag: 675cd309-f9ec-4155-a4f4-9524b8015943
+
+	column 'Tenant ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 793ff95a-bb81-48cf-bec8-54a900f06289
+		summarizeBy: none
+		sourceColumn: Tenant ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tenant Name'
+		dataType: string
+		lineageTag: 3928917f-a864-4e05-9e59-5c75bdcb0d7d
+		summarizeBy: none
+		sourceColumn: Tenant Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Contact Details'
+		dataType: string
+		lineageTag: 938104a8-8666-44a3-a69f-4c78dcfa604a
+		summarizeBy: none
+		sourceColumn: Contact Details
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lease Start Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2b993494-602e-4e4f-8e55-e6aa73e3940d
+		summarizeBy: none
+		sourceColumn: Lease Start Date
+
+		variation Variation
+			isDefault
+			relationship: 4b258e02-3c60-412a-875d-f2219523989c
+			defaultHierarchy: LocalDateTable_61de4e04-f2f5-4e54-ad80-4390074e3bca.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Lease End Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 28838b94-fe25-4b32-8577-7d10420bd5bb
+		summarizeBy: none
+		sourceColumn: Lease End Date
+
+		variation Variation
+			isDefault
+			relationship: 21ffae27-1a68-4970-a37d-d6c49fe3b030
+			defaultHierarchy: LocalDateTable_3eb2e4dd-1e30-448b-a894-3d5aec535709.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Feedback ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c0e07df-5c7f-410f-bda9-afc9a78714ab
+		summarizeBy: count
+		sourceColumn: Feedback ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Survey Response'
+		dataType: string
+		lineageTag: 37fc4a8e-712f-4abe-9ef6-c3768e1cb120
+		summarizeBy: none
+		sourceColumn: Survey Response
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comments
+		dataType: string
+		lineageTag: fee9f6a5-bead-4c49-9be6-46443914c934
+		summarizeBy: none
+		sourceColumn: Comments
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Satisfaction Score' =
+			SWITCH(
+			    TRUE(),
+			    'tenant_information and Feedback'[Survey Response] = "Very Satisfied", 5,
+			    'tenant_information and Feedback'[Survey Response] = "Satisfied",4,
+			    'tenant_information and Feedback'[Survey Response] = "Neutral", 3,
+			    'tenant_information and Feedback'[Survey Response] = "Dissatisfied",2,
+			    'tenant_information and Feedback'[Survey Response] = "Very Dissatisfied",1,
+			    0
+			)
+		formatString: 0
+		lineageTag: f0f3b0b6-f8cf-4429-84c7-0e73cd9a07f1
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'tenant_information and Feedback' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Windows 10 Pro\Desktop\Data Analytics\Amdari\Tenant Retention Optimization Building an Interactive Power BI Dashboard for Residential Real Estate Excellence\tenant_information.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Tenant ID", Int64.Type}, {"Tenant Name", type text}, {"Contact Details", type text}, {"Lease Start Date", type date}, {"Lease End Date", type date}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Changed Type", {"Tenant ID"}, tenant_feedback, {"Tenant ID"}, "tenant_feedback", JoinKind.LeftOuter),
+				    #"Expanded tenant_feedback" = Table.ExpandTableColumn(#"Merged Queries", "tenant_feedback", {"Feedback ID", "Survey Response", "Comments"}, {"Feedback ID", "Survey Response", "Comments"})
+				in
+				    #"Expanded tenant_feedback"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

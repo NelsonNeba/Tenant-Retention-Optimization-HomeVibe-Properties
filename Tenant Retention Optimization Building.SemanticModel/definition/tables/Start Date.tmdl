@@ -1,0 +1,102 @@
+table 'Start Date'
+	lineageTag: 5e0430d0-dc8f-41e6-9468-9fea8977e56d
+
+	column Date
+		formatString: General Date
+		lineageTag: 60dc5b30-8b5b-42e2-9ae0-a2c9953a10df
+		isDefaultLabel
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 6e0f0dfb-f4dc-4528-98aa-935ba86a6505
+			defaultHierarchy: LocalDateTable_61ffcb5c-2017-4e18-a24f-644d9ef8f1d4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: string
+		lineageTag: 8b4f8caf-3cda-4766-bf06-38eea9d4d8d8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		lineageTag: 562dd81b-aadb-4996-8ee2-27e2a5c026f5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		dataType: string
+		lineageTag: 8e9dd193-0ceb-4db2-8e4c-ac107e6450b3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: string
+		lineageTag: baa781e5-69a1-4c9c-99a5-7b3fed4c85d1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthName]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayName
+		lineageTag: 5d95274a-0576-4d37-8a1e-031db1bdcc50
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DayName]
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekDay
+		formatString: 0
+		lineageTag: 37805a87-3501-41d1-9386-39fe394cb408
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [WeekDay]
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Year Hierarchy'
+		lineageTag: fc0908d4-9979-4809-8753-098a7eafc823
+
+		level Year
+			lineageTag: 0ff47186-1366-45cc-b56c-cca94f978166
+			column: Year
+
+		level Month
+			lineageTag: 0b125cc2-e09d-4d07-ba68-2344470fe16e
+			column: Month
+
+		level Day
+			lineageTag: 836ae9de-815d-4007-bf2d-3bde8d800e58
+			column: Day
+
+	partition 'Start Date' = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS(
+				    CALENDAR("2020-01-01","2025-12-31"),
+				    "Year",YEAR([Date]),
+				    "Month",MONTH([Date]),
+				    "Day",DAY([Date]),
+				    "MonthName",FORMAT([Date],"mmmm"),
+				    "DayName",FORMAT([Date],"dddd"),
+				    "WeekDay",WEEKDAY([Date],2)
+				)
+
+	annotation PBI_Id = 6e7eb077428445539068deb8e51cb946
+

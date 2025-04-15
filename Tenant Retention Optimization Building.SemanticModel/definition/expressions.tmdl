@@ -1,0 +1,56 @@
+expression tenant_feedback =
+		let
+		    Source = Csv.Document(File.Contents("C:\Users\Windows 10 Pro\Desktop\Data Analytics\Amdari\Tenant Retention Optimization Building an Interactive Power BI Dashboard for Residential Real Estate Excellence\tenant_feedback.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Feedback ID", Int64.Type}, {"Tenant ID", Int64.Type}, {"Survey Response", type text}, {"Comments", type text}})
+		in
+		    #"Changed Type"
+	lineageTag: 39cc5d2b-cf62-4d85-a35f-ed2b1eeb5e4a
+	queryGroup: 'Raw Data'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 'lease_details (2)' =
+		let
+		    Source = Csv.Document(File.Contents("C:\Users\Windows 10 Pro\Desktop\Data Analytics\Amdari\Tenant Retention Optimization Building an Interactive Power BI Dashboard for Residential Real Estate Excellence\lease_details.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Lease ID", Int64.Type}, {"Lease Start Date", type date}, {"Lease End Date", type date}, {"Lease Term (Months)", Int64.Type}, {"Rent Amount (USD)", Int64.Type}, {"Payment History (USD)", Int64.Type}, {"Property ID", Int64.Type}})
+		in
+		    #"Changed Type"
+	lineageTag: 1c3db1f3-a5a9-463b-961d-5707fd651e0b
+	queryGroup: 'Raw Data'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 'property_information (2)' =
+		let
+		    Source = Csv.Document(File.Contents("C:\Users\Windows 10 Pro\Desktop\Data Analytics\Amdari\Tenant Retention Optimization Building an Interactive Power BI Dashboard for Residential Real Estate Excellence\property_information.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.Csv]),
+		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Property ID", Int64.Type}, {"Property Name", type text}, {"Location", type text}, {"Property Type", type text}, {"Amenities", type text}, {"Historical Occupancy Rate (%)", Int64.Type}})
+		in
+		    #"Changed Type"
+	lineageTag: 85c3e168-1935-435d-a274-73f01f1990da
+	queryGroup: 'Raw Data'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 'tenant_information (2)' =
+		let
+		    Source = Csv.Document(File.Contents("C:\Users\Windows 10 Pro\Desktop\Data Analytics\Amdari\Tenant Retention Optimization Building an Interactive Power BI Dashboard for Residential Real Estate Excellence\tenant_information.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Tenant ID", Int64.Type}, {"Tenant Name", type text}, {"Contact Details", type text}, {"Lease Start Date", type date}, {"Lease End Date", type date}})
+		in
+		    #"Changed Type"
+	lineageTag: f4b1d5fc-e7d1-4404-a249-aec7736348b3
+	queryGroup: 'Raw Data'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

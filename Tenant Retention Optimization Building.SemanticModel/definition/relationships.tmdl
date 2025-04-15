@@ -1,0 +1,38 @@
+relationship 4b258e02-3c60-412a-875d-f2219523989c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'tenant_information and Feedback'.'Lease Start Date'
+	toColumn: LocalDateTable_61de4e04-f2f5-4e54-ad80-4390074e3bca.Date
+
+relationship 21ffae27-1a68-4970-a37d-d6c49fe3b030
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'tenant_information and Feedback'.'Lease End Date'
+	toColumn: LocalDateTable_3eb2e4dd-1e30-448b-a894-3d5aec535709.Date
+
+relationship AutoDetected_da6049dd-12a5-4ace-9f71-2ca81e7082f4
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'tenant_information and Feedback'.'Tenant ID'
+	toColumn: Fact_lease_details.'Tenant ID'
+
+relationship AutoDetected_ca299af9-3172-4a37-814c-d06c1f1c1c3a
+	fromColumn: Fact_lease_details.'Property ID'
+	toColumn: property_information.'Property ID'
+
+relationship 36e61225-3879-4ec0-a8f8-0b9ce1d0d3bf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'End Date'.Date
+	toColumn: LocalDateTable_da15556a-fa99-453a-8715-b9fb24ecc469.Date
+
+relationship 8a55d07f-37d3-c474-92a6-5b1b48fe7be5
+	fromColumn: Fact_lease_details.'Lease End Date'
+	toColumn: 'End Date'.Date
+
+relationship 6e0f0dfb-f4dc-4528-98aa-935ba86a6505
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Start Date'.Date
+	toColumn: LocalDateTable_61ffcb5c-2017-4e18-a24f-644d9ef8f1d4.Date
+
+relationship 32d1ccb5-e456-0fa1-5a2f-2952b3bfe12f
+	fromColumn: Fact_lease_details.'Lease Start Date'
+	toColumn: 'Start Date'.Date
+

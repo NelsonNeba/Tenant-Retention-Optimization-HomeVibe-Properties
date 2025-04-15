@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Tenant Retention Optimization Building"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "84555766-c909-4985-99d9-34f113173bcb"
+  }
+}
