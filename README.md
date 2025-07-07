@@ -122,7 +122,7 @@ The project utilizes **4 interconnected datasets** to provide a holistic view of
 | Historical Occupancy Rate (%) | The historical occupancy rate of the property, expressed as a percentage. |
 
 #### Data Model (ERD)
- * [Model)](Assets/model.png) 
+ * ![Model](Assets/model.png) 
 
 -----
 
