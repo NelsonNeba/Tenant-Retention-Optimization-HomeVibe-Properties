@@ -3,7 +3,7 @@
 An end-to-end data analytics solution leveraging Power BI for optimizing tenant retention in the residential real estate industry. This project offers hands-on experience in designing a full-scale data analytics pipeline, from data integration to actionable insights extraction.
 
 -----
-[Dashboard](Assets/Dashboard.png) 
+* ![Dashboard](Assets/Dashboard.png)
 -----
 ## 📖 Table of Contents
 
