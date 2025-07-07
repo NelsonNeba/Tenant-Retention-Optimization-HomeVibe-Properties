@@ -1,6 +1,6 @@
 expression tenant_feedback =
 		let
-		    Source = Csv.Document(File.Contents("C:\Users\Windows 10 Pro\Desktop\Data Analytics\Amdari\Tenant Retention Optimization Building an Interactive Power BI Dashboard for Residential Real Estate Excellence\tenant_feedback.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    Source = Csv.Document(File.Contents("C:\Users\Nel\Desktop\Data Analytics\Amdari\Tenant-Retention-Optimization-HomeVibe-Properties-\Dataset\tenant_feedback.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Feedback ID", Int64.Type}, {"Tenant ID", Int64.Type}, {"Survey Response", type text}, {"Comments", type text}})
 		in
@@ -14,7 +14,7 @@ expression tenant_feedback =
 
 expression 'lease_details (2)' =
 		let
-		    Source = Csv.Document(File.Contents("C:\Users\Windows 10 Pro\Desktop\Data Analytics\Amdari\Tenant Retention Optimization Building an Interactive Power BI Dashboard for Residential Real Estate Excellence\lease_details.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    Source = Csv.Document(File.Contents("C:\Users\Nel\Desktop\Data Analytics\Amdari\Tenant-Retention-Optimization-HomeVibe-Properties-\Dataset\lease_details.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Lease ID", Int64.Type}, {"Lease Start Date", type date}, {"Lease End Date", type date}, {"Lease Term (Months)", Int64.Type}, {"Rent Amount (USD)", Int64.Type}, {"Payment History (USD)", Int64.Type}, {"Property ID", Int64.Type}})
 		in
@@ -28,7 +28,7 @@ expression 'lease_details (2)' =
 
 expression 'property_information (2)' =
 		let
-		    Source = Csv.Document(File.Contents("C:\Users\Windows 10 Pro\Desktop\Data Analytics\Amdari\Tenant Retention Optimization Building an Interactive Power BI Dashboard for Residential Real Estate Excellence\property_information.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.Csv]),
+		    Source = Csv.Document(File.Contents("C:\Users\Nel\Desktop\Data Analytics\Amdari\Tenant-Retention-Optimization-HomeVibe-Properties-\Dataset\property_information.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.Csv]),
 		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Property ID", Int64.Type}, {"Property Name", type text}, {"Location", type text}, {"Property Type", type text}, {"Amenities", type text}, {"Historical Occupancy Rate (%)", Int64.Type}})
 		in
@@ -42,7 +42,7 @@ expression 'property_information (2)' =
 
 expression 'tenant_information (2)' =
 		let
-		    Source = Csv.Document(File.Contents("C:\Users\Windows 10 Pro\Desktop\Data Analytics\Amdari\Tenant Retention Optimization Building an Interactive Power BI Dashboard for Residential Real Estate Excellence\tenant_information.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    Source = Csv.Document(File.Contents("C:\Users\Nel\Desktop\Data Analytics\Amdari\Tenant-Retention-Optimization-HomeVibe-Properties-\Dataset\tenant_information.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 		    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Tenant ID", Int64.Type}, {"Tenant Name", type text}, {"Contact Details", type text}, {"Lease Start Date", type date}, {"Lease End Date", type date}})
 		in

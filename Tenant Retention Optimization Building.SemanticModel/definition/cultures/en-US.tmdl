@@ -662,27 +662,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "lease duration": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
 			          "tenure": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "duration": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -743,6 +723,26 @@ cultureInfo en-US
 			        },
 			        {
 			          "stretch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "span": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "stint": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1577,12 +1577,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "occupancy rate": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "historical occupancy degree": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -1633,53 +1627,53 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "occupancy degree": {
+			          "historical occupancy amount": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.492
 			          }
 			        },
 			        {
-			          "occupancy frequency": {
+			          "historical occupancy proportion": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.492
 			          }
 			        },
 			        {
-			          "occupancy percentage": {
+			          "historical occupancy speed": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.492
 			          }
 			        },
 			        {
-			          "occupancy ratio": {
+			          "historical occupancy level": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.492
 			          }
 			        },
 			        {
-			          "occupancy quotient": {
+			          "historical occupancy scale": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.492
 			          }
 			        }
 			      ],
@@ -4640,8 +4634,7 @@ cultureInfo en-US
 			            "Weight": 0.736
 			          }
 			        }
-			      ],
-			      "SemanticType": "Time"
+			      ]
 			    },
 			    "start_date.month": {
 			      "Definition": {
@@ -5592,12 +5585,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "occupancy rate": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "latest occupancy rate": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -5678,28 +5665,300 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "occupancy degree": {
+			          "current occupancy amount": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.492
 			          }
 			        },
 			        {
-			          "occupancy frequency": {
+			          "current occupancy proportion": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.492
 			          }
 			        }
 			      ]
 			    },
-			    "measures_table": {
+			    "fact_lease_detail.is_renewed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_lease_details",
+			          "ConceptualProperty": "Is Renewed"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "is renewed": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "start_date.year_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Start Date",
+			          "Hierarchy": "Year Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "yr hierarchy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "year ladder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "year grading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "year order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "year pyramid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "ladder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "grading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pyramid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "start_date.year_hierarchy.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Start Date",
+			          "Hierarchy": "Year Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "start_date.year_hierarchy.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Start Date",
+			          "Hierarchy": "Year Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "start_date.year_hierarchy.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Start Date",
+			          "Hierarchy": "Year Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "end_date.month_name_sorted": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "End Date",
+			          "ConceptualProperty": "MonthNameSorted"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month name sorted": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MonthNameSorted": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "month nickname sorted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "month title sorted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "month label sorted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "month tag sorted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "mth name sorted": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "measure": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measures Table"
@@ -5821,163 +6080,23 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measures_table.dummy_column": {
+			    "measure.tenant_churn_rate": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measures Table",
-			          "ConceptualProperty": "DummyColumn"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "dummy column": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "DummyColumn": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "dummy pilaster": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "dummy pier": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "dummy pillar": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "dummy post": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "dummy support": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "dummy stake": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "dummy pole": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "dummy buttress": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "dummy underpinning": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "dummy contribution": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.475
-			          }
-			        }
-			      ]
-			    },
-			    "measures_table.churn_rate_past_year": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Measures Table",
-			          "ConceptualProperty": "Churn_Rate_Ended_Leases"
+			          "ConceptualProperty": "Tenant Churn Rate (%)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "churn rate past year": {
+			          "tenant churn rate": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Churn_Rate_Past_Year": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "past year": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "rate past year": {
-			            "State": "Generated",
-			            "Weight": 0.97
+			          "tenant churn rate (%)": {
+			            "State": "Generated"
 			          }
 			        },
 			        {
@@ -5993,393 +6112,1437 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "past yr": {
+			          "tenant churn degree": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "tenant churn frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "tenant churn percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "tenant churn ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "tenant churn quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "churn degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "churn frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "churn percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "churn ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "churn quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ],
+			      "Units": [
+			        "percentage",
+			        "%"
+			      ]
+			    },
+			    "measure.number_of_leases_ended": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Number of Leases Ended"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "number of leases ended": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quantity of lease ended": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.786
+			          }
+			        },
+			        {
+			          "amount of lease ended": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "count of lease ended": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "number of lease ended": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "no of lease ended": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "measure.total_active_leases": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Total Active Leases"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total active leases": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "leases": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "active leases": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate active lease": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall active lease": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "total active tenancy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "total active occupancy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "total active agreement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "active tenancy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "active occupancy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "active agreement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total active let": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "total active rent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "measure.lease_renewal_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Lease Renewal Rate (%)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lease renewal rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "lease renewal rate (%)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "lease renewal degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "lease renewal frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "lease renewal percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "lease renewal ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "lease renewal quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "lease renewal amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "lease renewal proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "lease renewal speed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "lease renewal level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "lease renewal scale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ],
+			      "Units": [
+			        "percentage",
+			        "%"
+			      ]
+			    },
+			    "measure.number_of_renewed_leases": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Number of Renewed Leases"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "number of renewed leases": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quantity of renewed lease": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.786
+			          }
+			        },
+			        {
+			          "amount of renewed lease": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "count of renewed lease": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "number of renewed lease": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "no of renewed lease": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "measure.total_expiring_leases": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Total Expiring Leases"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total expiring leases": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "leases": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "expiring leases": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate expiring lease": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall expiring lease": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "total expiring tenancy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "total expiring occupancy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "total expiring agreement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "expiring tenancy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "expiring occupancy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "expiring agreement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total expiring let": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "total expiring rent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "measure.average_lease_duration": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Average Lease Duration (Months)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "average lease duration": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "average lease duration (Months)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "duration": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "lease duration": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "average lease length": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "average lease extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "average lease interval": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "lease length": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "lease extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "lease interval": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "average lease period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "average lease spell": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "length": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ],
+			      "Units": [
+			        "month"
+			      ]
+			    },
+			    "measure.survey_response_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Survey Response Rate (%)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "survey response rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "survey response rate (%)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "response rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "survey response degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "survey response frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "survey response percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "survey response ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "survey response quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "response degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "response frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "response percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "response ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "response quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ],
+			      "Units": [
+			        "percentage",
+			        "%"
+			      ]
+			    },
+			    "measure.number_of_surveys_completed": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Number of Surveys Completed"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "number of surveys completed": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quantity of survey completed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.786
+			          }
+			        },
+			        {
+			          "amount of survey completed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "count of survey completed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "number of survey completed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "no of survey completed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "measure.total_number_of_tenants": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Total Number of Tenants"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total number of tenants": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total number": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "total quantity of tenant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.786
+			          }
+			        },
+			        {
+			          "total amount of tenant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "total count of tenant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "total number of tenant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "total no of tenant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "total no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "aggregate number of tenant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "overall number of tenant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "aggregate number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "measure.average_satisfaction_score": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Average Satisfaction Score"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "average satisfaction score": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "score": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "average satisfaction notch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "average satisfaction slash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "average satisfaction groove": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "average satisfaction nick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "average satisfaction cut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "average satisfaction mark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "notch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "slash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "groove": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "nick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "measure.occupancy_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Occupancy Rate (%)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "occupancy rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "occupancy rate (%)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "occupancy degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "occupancy frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "occupancy percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "occupancy ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "occupancy quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "occupancy amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ],
+			      "Units": [
+			        "percentage",
+			        "%"
+			      ]
+			    },
+			    "measure.churn_due_to_maintenance_issues": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Churn due to Maintenance Issues"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "churn due to maintenance issues": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure.leases_ended_this_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Leases Ended (This Month)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "leases ended (this month)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "leases ended": {
+			            "State": "Generated",
 			            "Weight": 0.75
 			          }
-			        },
-			        {
-			          "churn rate past yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "rate past yr": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "churn degree past year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "churn frequency past year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "churn percentage past year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "churn ratio past year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "churn quotient past year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "degree past year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "frequency past year": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
 			        }
 			      ]
 			    },
-			    "measures_table.average_rent": {
+			    "measure.active_tenants_start_of_month": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measures Table",
-			          "ConceptualProperty": "Average Rent"
+			          "ConceptualProperty": "Active Tenants (Start of Month)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "average rent": {
+			          "active tenants (start of month)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "rent": {
+			          "active tenants": {
 			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "average payment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "payment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "average rental": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "average fee": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "average charge": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "average lease": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "rental": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "fee": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "charge": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "average hole": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
+			            "Weight": 0.75
 			          }
 			        }
 			      ]
 			    },
-			    "measures_table.total_expected_rent": {
+			    "measure.monthly_churn_rate": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measures Table",
-			          "ConceptualProperty": "Total Expected Rent"
+			          "ConceptualProperty": "Monthly Churn Rate (%)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "total expected rent": {
+			          "monthly churn rate": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "aggregate expected rent": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "overall expected rent": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "total expected payment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "total expected rental": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "total expected fee": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "total expected charge": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "total expected lease": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "total expected hole": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.468
-			          }
-			        },
-			        {
-			          "total expected tear": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.468
-			          }
-			        },
-			        {
-			          "total expected rip": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.468
-			          }
-			        }
-			      ]
-			    },
-			    "measures_table.total_payment_history": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Measures Table",
-			          "ConceptualProperty": "Total Payment History"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "total payment history": {
+			          "monthly churn rate (%)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "history": {
+			          "rate": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "payment history": {
+			          "churn rate": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "aggregate payment history": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "overall payment history": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "total payment antiquity": {
+			          "monthly churn degree": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -6389,7 +7552,47 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "payment antiquity": {
+			          "monthly churn frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "monthly churn percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "monthly churn ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "monthly churn quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "churn degree": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -6399,196 +7602,52 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "total payment past": {
+			          "churn frequency": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.5
 			          }
 			        },
 			        {
-			          "antiquity": {
+			          "churn percentage": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.5
 			          }
 			        },
 			        {
-			          "payment past": {
+			          "churn ratio": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.485
+			            "Weight": 0.5
 			          }
 			        },
 			        {
-			          "total payment narration": {
+			          "churn quotient": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.482
-			          }
-			        },
-			        {
-			          "total payment saga": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.482
-			          }
-			        },
-			        {
-			          "total payment description": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.482
+			            "Weight": 0.5
 			          }
 			        }
+			      ],
+			      "Units": [
+			        "percentage",
+			        "%"
 			      ]
 			    },
-			    "measures_table.rent_collection_performance": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Measures Table",
-			          "ConceptualProperty": "Rent Collection Performance"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "rent collection performance": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "performance": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "collection performance": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "rent collection presentation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "rent collection recital": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "rent collection enactment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "collection presentation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "collection recital": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "collection enactment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "rent collection act": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "rent collection routine": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "rent collection concert": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "rent collection show": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        }
-			      ]
-			    },
-			    "measures_table.churned_leases": {
+			    "measure.churned_leases": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measures Table",
@@ -6720,7 +7779,334 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measures_table.renewed_leases": {
+			    "measure.average_rent": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Average Rent"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "average rent": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rent": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "average payment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "payment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "average rental": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "average fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "average charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "average lease": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "rental": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "average hole": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "measure.churn_rate_ended_leases": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Churn_Rate_Ended_Leases"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "churn rate ended leases": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Churn_Rate_Ended_Leases": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "churn rate ended tenancy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "churn rate ended occupancy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "churn rate ended agreement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "churn rate ended let": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "churn rate ended rent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "churn rate ended contract": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "measure.renewal_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Renewal Rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "renewal rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "renewal degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "renewal frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "renewal percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "renewal ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "renewal quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "renewal amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "measure.renewed_leases": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measures Table",
@@ -6841,9 +8227,501 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "measure.rent_collection_performance": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Rent Collection Performance"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rent collection performance": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "performance": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "collection performance": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rent collection presentation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "rent collection recital": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "rent collection enactment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "collection presentation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "collection recital": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "collection enactment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rent collection act": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "rent collection routine": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "rent collection concert": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "rent collection show": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "measure.total_expected_rent": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Total Expected Rent"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total expected rent": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate expected rent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall expected rent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "total expected payment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "total expected rental": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "total expected fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "total expected charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "total expected lease": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "total expected hole": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "total expected tear": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "total expected rip": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "measure.total_payment_history": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Total Payment History"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total payment history": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "history": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "payment history": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate payment history": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "overall payment history": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "total payment antiquity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "payment antiquity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total payment past": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "antiquity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "payment past": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total payment narration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "total payment saga": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "total payment description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        }
+			      ]
+			    },
+			    "current_occupancy_rate.churned_leases": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Current_Occupancy_Rate",
+			          "ConceptualProperty": "Churned Leases"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Expired Leases": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "start_date_year_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Start Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "start_date.year_hierarchy": {
+			          "Target": {
+			            "Entity": "start_date.year_hierarchy"
+			          }
+			        },
+			        "start_date.year_hierarchy.month": {
+			          "Target": {
+			            "Entity": "start_date.year_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "start_date.year_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "start_date.year_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "year_hierarchies_have_months"
+			        }
+			      ]
+			    },
+			    "start_date_year_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Start Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "start_date.year_hierarchy": {
+			          "Target": {
+			            "Entity": "start_date.year_hierarchy"
+			          }
+			        },
+			        "start_date.year_hierarchy.year": {
+			          "Target": {
+			            "Entity": "start_date.year_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "start_date.year_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "start_date.year_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "year_hierarchies_have_years"
+			        }
+			      ]
+			    },
+			    "end_date_date_date_hierarchy_has_end_date_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "End Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "end_date.date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "end_date.date.date_hierarchy"
+			          }
+			        },
+			        "end_date.date.day": {
+			          "Target": {
+			            "Entity": "end_date.date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "end_date.date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "end_date.date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchies_have_days"
+			        }
+			      ]
+			    },
 			    "end_date_date_date_hierarchy_has_end_date_date_month": {
 			      "Binding": {
 			        "ConceptualEntity": "End Date"
@@ -7005,7 +8883,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_days"
+			          "ID": "date_hierarchies_have_days1"
 			        }
 			      ]
 			    },
@@ -7504,52 +9382,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_lease_detail_has_end_date": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_lease_details"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_lease_detail": {
-			          "Target": {
-			            "Entity": "fact_lease_detail"
-			          }
-			        },
-			        "end_date": {
-			          "Target": {
-			            "Entity": "end_date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_lease_detail"
-			            },
-			            "Object": {
-			              "Role": "end_date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_lease_details_have_end_dates"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "end_date"
-			            },
-			            "Object": {
-			              "Role": "fact_lease_detail"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "end_dates_have_fact_lease_details"
-			        }
-			      ]
-			    },
 			    "fact_lease_detail_has_start_date": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_lease_details"
@@ -7593,6 +9425,85 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "start_dates_have_fact_lease_details"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_tenant_information_and_feedback": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "tenant_information_and_feedback": {
+			          "Target": {
+			            "Entity": "tenant_information_and_feedback"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "tenant_information_and_feedback"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_tenant_information_and_feedbacks"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_end_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "end_date": {
+			          "Target": {
+			            "Entity": "end_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "end_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_end_dates"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "end_date"
+			            },
+			            "Object": {
+			              "Role": "fact_lease_detail"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "end_dates_have_fact_lease_details"
 			        }
 			      ]
 			    },
@@ -7649,7 +9560,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_lease_detail_has_tenant_information_and_feedback": {
+			    "fact_lease_detail_has_measure_total_payment_history": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_lease_details"
 			      },
@@ -7660,9 +9571,9 @@ cultureInfo en-US
 			            "Entity": "fact_lease_detail"
 			          }
 			        },
-			        "tenant_information_and_feedback": {
+			        "measure.total_payment_history": {
 			          "Target": {
-			            "Entity": "tenant_information_and_feedback"
+			            "Entity": "measure.total_payment_history"
 			          }
 			        }
 			      },
@@ -7673,139 +9584,7 @@ cultureInfo en-US
 			              "Role": "fact_lease_detail"
 			            },
 			            "Object": {
-			              "Role": "tenant_information_and_feedback"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_lease_details_have_tenant_information_and_feedbacks"
-			        }
-			      ]
-			    },
-			    "fact_lease_detail_has_measures_table_renewed_leases": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_lease_details"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_lease_detail": {
-			          "Target": {
-			            "Entity": "fact_lease_detail"
-			          }
-			        },
-			        "measures_table.renewed_leases": {
-			          "Target": {
-			            "Entity": "measures_table.renewed_leases"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_lease_detail"
-			            },
-			            "Object": {
-			              "Role": "measures_table.renewed_leases"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_lease_details_have_renewed_leases"
-			        }
-			      ]
-			    },
-			    "fact_lease_detail_has_measures_table_churned_leases": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_lease_details"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_lease_detail": {
-			          "Target": {
-			            "Entity": "fact_lease_detail"
-			          }
-			        },
-			        "measures_table.churned_leases": {
-			          "Target": {
-			            "Entity": "measures_table.churned_leases"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_lease_detail"
-			            },
-			            "Object": {
-			              "Role": "measures_table.churned_leases"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_lease_details_have_churned_leases"
-			        }
-			      ]
-			    },
-			    "fact_lease_detail_has_measures_table_rent_collection_performance": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_lease_details"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_lease_detail": {
-			          "Target": {
-			            "Entity": "fact_lease_detail"
-			          }
-			        },
-			        "measures_table.rent_collection_performance": {
-			          "Target": {
-			            "Entity": "measures_table.rent_collection_performance"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_lease_detail"
-			            },
-			            "Object": {
-			              "Role": "measures_table.rent_collection_performance"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_lease_details_have_rent_collection_performance"
-			        }
-			      ]
-			    },
-			    "fact_lease_detail_has_measures_table_total_payment_history": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_lease_details"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_lease_detail": {
-			          "Target": {
-			            "Entity": "fact_lease_detail"
-			          }
-			        },
-			        "measures_table.total_payment_history": {
-			          "Target": {
-			            "Entity": "measures_table.total_payment_history"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_lease_detail"
-			            },
-			            "Object": {
-			              "Role": "measures_table.total_payment_history"
+			              "Role": "measure.total_payment_history"
 			            }
 			          },
 			          "State": "Generated",
@@ -7814,7 +9593,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_lease_detail_has_measures_table_total_expected_rent": {
+			    "fact_lease_detail_has_measure_total_expected_rent": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_lease_details"
 			      },
@@ -7825,9 +9604,9 @@ cultureInfo en-US
 			            "Entity": "fact_lease_detail"
 			          }
 			        },
-			        "measures_table.total_expected_rent": {
+			        "measure.total_expected_rent": {
 			          "Target": {
-			            "Entity": "measures_table.total_expected_rent"
+			            "Entity": "measure.total_expected_rent"
 			          }
 			        }
 			      },
@@ -7838,7 +9617,7 @@ cultureInfo en-US
 			              "Role": "fact_lease_detail"
 			            },
 			            "Object": {
-			              "Role": "measures_table.total_expected_rent"
+			              "Role": "measure.total_expected_rent"
 			            }
 			          },
 			          "State": "Generated",
@@ -7847,7 +9626,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_lease_detail_has_measures_table_average_rent": {
+			    "fact_lease_detail_has_measure_rent_collection_performance": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_lease_details"
 			      },
@@ -7858,9 +9637,9 @@ cultureInfo en-US
 			            "Entity": "fact_lease_detail"
 			          }
 			        },
-			        "measures_table.average_rent": {
+			        "measure.rent_collection_performance": {
 			          "Target": {
-			            "Entity": "measures_table.average_rent"
+			            "Entity": "measure.rent_collection_performance"
 			          }
 			        }
 			      },
@@ -7871,7 +9650,139 @@ cultureInfo en-US
 			              "Role": "fact_lease_detail"
 			            },
 			            "Object": {
-			              "Role": "measures_table.average_rent"
+			              "Role": "measure.rent_collection_performance"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_rent_collection_performance"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_renewed_leases": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.renewed_leases": {
+			          "Target": {
+			            "Entity": "measure.renewed_leases"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.renewed_leases"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_renewed_leases"
+			        }
+			      ]
+			    },
+			    "measure_has_renewal_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Measures Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure": {
+			          "Target": {
+			            "Entity": "measure"
+			          }
+			        },
+			        "measure.renewal_rate": {
+			          "Target": {
+			            "Entity": "measure.renewal_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure"
+			            },
+			            "Object": {
+			              "Role": "measure.renewal_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measures_tables_have_renewal_rate"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_churn_rate_ended_leases": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.churn_rate_ended_leases": {
+			          "Target": {
+			            "Entity": "measure.churn_rate_ended_leases"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.churn_rate_ended_leases"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_churn_rate_ended_leases"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_average_rent": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.average_rent": {
+			          "Target": {
+			            "Entity": "measure.average_rent"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.average_rent"
 			            }
 			          },
 			          "State": "Generated",
@@ -7880,7 +9791,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_lease_detail_has_measures_table_churn_rate_past_year": {
+			    "fact_lease_detail_has_measure_churned_leases": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_lease_details"
 			      },
@@ -7891,9 +9802,9 @@ cultureInfo en-US
 			            "Entity": "fact_lease_detail"
 			          }
 			        },
-			        "measures_table.churn_rate_past_year": {
+			        "measure.churned_leases": {
 			          "Target": {
-			            "Entity": "measures_table.churn_rate_past_year"
+			            "Entity": "measure.churned_leases"
 			          }
 			        }
 			      },
@@ -7904,12 +9815,672 @@ cultureInfo en-US
 			              "Role": "fact_lease_detail"
 			            },
 			            "Object": {
-			              "Role": "measures_table.churn_rate_past_year"
+			              "Role": "measure.churned_leases"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_lease_details_have_churn_rate_past_year"
+			          "ID": "fact_lease_details_have_churned_leases"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_monthly_churn_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.monthly_churn_rate": {
+			          "Target": {
+			            "Entity": "measure.monthly_churn_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.monthly_churn_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_monthly_churn_rate"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_active_tenants_start_of_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.active_tenants_start_of_month": {
+			          "Target": {
+			            "Entity": "measure.active_tenants_start_of_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.active_tenants_start_of_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_active_tenants_start_of_month"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_leases_ended_this_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.leases_ended_this_month": {
+			          "Target": {
+			            "Entity": "measure.leases_ended_this_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.leases_ended_this_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_leases_ended_this_month"
+			        }
+			      ]
+			    },
+			    "tenant_information_and_feedback_has_measure_churn_due_to_maintenance_issues": {
+			      "Binding": {
+			        "ConceptualEntity": "tenant_information and Feedback"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tenant_information_and_feedback": {
+			          "Target": {
+			            "Entity": "tenant_information_and_feedback"
+			          }
+			        },
+			        "measure.churn_due_to_maintenance_issues": {
+			          "Target": {
+			            "Entity": "measure.churn_due_to_maintenance_issues"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tenant_information_and_feedback"
+			            },
+			            "Object": {
+			              "Role": "measure.churn_due_to_maintenance_issues"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tenant_information_and_feedbacks_have_churn_due_to_maintenance_issues"
+			        }
+			      ]
+			    },
+			    "property_information_has_measure_occupancy_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "property_information"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "property_information": {
+			          "Target": {
+			            "Entity": "property_information"
+			          }
+			        },
+			        "measure.occupancy_rate": {
+			          "Target": {
+			            "Entity": "measure.occupancy_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "property_information"
+			            },
+			            "Object": {
+			              "Role": "measure.occupancy_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "property_information_have_occupancy_rate"
+			        }
+			      ]
+			    },
+			    "tenant_information_and_feedback_has_measure_average_satisfaction_score": {
+			      "Binding": {
+			        "ConceptualEntity": "tenant_information and Feedback"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tenant_information_and_feedback": {
+			          "Target": {
+			            "Entity": "tenant_information_and_feedback"
+			          }
+			        },
+			        "measure.average_satisfaction_score": {
+			          "Target": {
+			            "Entity": "measure.average_satisfaction_score"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tenant_information_and_feedback"
+			            },
+			            "Object": {
+			              "Role": "measure.average_satisfaction_score"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tenant_information_and_feedbacks_have_average_satisfaction_score"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_total_number_of_tenants": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.total_number_of_tenants": {
+			          "Target": {
+			            "Entity": "measure.total_number_of_tenants"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.total_number_of_tenants"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_total_number_of_tenants"
+			        }
+			      ]
+			    },
+			    "tenant_information_and_feedback_has_measure_number_of_surveys_completed": {
+			      "Binding": {
+			        "ConceptualEntity": "tenant_information and Feedback"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tenant_information_and_feedback": {
+			          "Target": {
+			            "Entity": "tenant_information_and_feedback"
+			          }
+			        },
+			        "measure.number_of_surveys_completed": {
+			          "Target": {
+			            "Entity": "measure.number_of_surveys_completed"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tenant_information_and_feedback"
+			            },
+			            "Object": {
+			              "Role": "measure.number_of_surveys_completed"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tenant_information_and_feedbacks_have_number_of_surveys_completed"
+			        }
+			      ]
+			    },
+			    "tenant_information_and_feedback_has_measure_survey_response_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "tenant_information and Feedback"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tenant_information_and_feedback": {
+			          "Target": {
+			            "Entity": "tenant_information_and_feedback"
+			          }
+			        },
+			        "measure.survey_response_rate": {
+			          "Target": {
+			            "Entity": "measure.survey_response_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tenant_information_and_feedback"
+			            },
+			            "Object": {
+			              "Role": "measure.survey_response_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tenant_information_and_feedbacks_have_survey_response_rate"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_survey_response_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.survey_response_rate": {
+			          "Target": {
+			            "Entity": "measure.survey_response_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.survey_response_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_survey_response_rate"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_average_lease_duration": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.average_lease_duration": {
+			          "Target": {
+			            "Entity": "measure.average_lease_duration"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.average_lease_duration"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_average_lease_duration"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_total_expiring_leases": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.total_expiring_leases": {
+			          "Target": {
+			            "Entity": "measure.total_expiring_leases"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.total_expiring_leases"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_total_expiring_leases"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_number_of_renewed_leases": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.number_of_renewed_leases": {
+			          "Target": {
+			            "Entity": "measure.number_of_renewed_leases"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.number_of_renewed_leases"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_number_of_renewed_leases"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_lease_renewal_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.lease_renewal_rate": {
+			          "Target": {
+			            "Entity": "measure.lease_renewal_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.lease_renewal_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_lease_renewal_rate"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_total_active_leases": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.total_active_leases": {
+			          "Target": {
+			            "Entity": "measure.total_active_leases"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.total_active_leases"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_total_active_leases"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_number_of_leases_ended": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.number_of_leases_ended": {
+			          "Target": {
+			            "Entity": "measure.number_of_leases_ended"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.number_of_leases_ended"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_number_of_leases_ended"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_measure_tenant_churn_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "measure.tenant_churn_rate": {
+			          "Target": {
+			            "Entity": "measure.tenant_churn_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "measure.tenant_churn_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_tenant_churn_rate"
+			        }
+			      ]
+			    },
+			    "end_date_has_month_name_sorted": {
+			      "Binding": {
+			        "ConceptualEntity": "End Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "end_date": {
+			          "Target": {
+			            "Entity": "end_date"
+			          }
+			        },
+			        "end_date.month_name_sorted": {
+			          "Target": {
+			            "Entity": "end_date.month_name_sorted"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "end_date"
+			            },
+			            "Object": {
+			              "Role": "end_date.month_name_sorted"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "end_dates_have_month_name_sorted"
+			        }
+			      ]
+			    },
+			    "start_date_has_year_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Start Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "start_date": {
+			          "Target": {
+			            "Entity": "start_date"
+			          }
+			        },
+			        "start_date.year_hierarchy": {
+			          "Target": {
+			            "Entity": "start_date.year_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "start_date"
+			            },
+			            "Object": {
+			              "Role": "start_date.year_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "start_dates_have_year_hierarchies"
+			        }
+			      ]
+			    },
+			    "fact_lease_detail_has_is_renewed": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_lease_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_lease_detail": {
+			          "Target": {
+			            "Entity": "fact_lease_detail"
+			          }
+			        },
+			        "fact_lease_detail.is_renewed": {
+			          "Target": {
+			            "Entity": "fact_lease_detail.is_renewed"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Object": {
+			              "Role": "fact_lease_detail.is_renewed"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_lease_details_have_is_renewed"
 			        }
 			      ]
 			    },
@@ -9258,20 +11829,70 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "end_date_date_date_hierarchy_has_end_date_date_day": {
+			    "fact_lease_detail_is_renewed": {
 			      "Binding": {
-			        "ConceptualEntity": "End Date"
+			        "ConceptualEntity": "Fact_lease_details"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "end_date.date.date_hierarchy": {
+			        "fact_lease_detail": {
 			          "Target": {
-			            "Entity": "end_date.date.date_hierarchy"
+			            "Entity": "fact_lease_detail"
 			          }
 			        },
-			        "end_date.date.day": {
+			        "fact_lease_detail.is_renewed": {
 			          "Target": {
-			            "Entity": "end_date.date.day"
+			            "Entity": "fact_lease_detail.is_renewed"
+			          }
+			        }
+			      },
+			      "Conditions": [
+			        {
+			          "Target": {
+			            "Role": "fact_lease_detail.is_renewed"
+			          },
+			          "Operator": "Equals",
+			          "Value": {
+			            "Boolean": [
+			              true
+			            ]
+			          }
+			        }
+			      ],
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "fact_lease_detail"
+			            },
+			            "Adjectives": [
+			              {
+			                "renewed": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "some_fact_lease_details_are_renewed_fact_lease_details"
+			        }
+			      ]
+			    },
+			    "start_date_year_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Start Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "start_date.year_hierarchy": {
+			          "Target": {
+			            "Entity": "start_date.year_hierarchy"
+			          }
+			        },
+			        "start_date.year_hierarchy.day": {
+			          "Target": {
+			            "Entity": "start_date.year_hierarchy.day"
 			          }
 			        }
 			      },
@@ -9279,15 +11900,147 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "end_date.date.date_hierarchy"
+			              "Role": "start_date.year_hierarchy"
 			            },
 			            "Object": {
-			              "Role": "end_date.date.day"
+			              "Role": "start_date.year_hierarchy.day"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "date_hierarchies_have_days1"
+			          "ID": "year_hierarchies_have_days"
+			        }
+			      ]
+			    },
+			    "start_date_year_hierarchy_year_has_start_date_year_hierarchy_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Start Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "start_date.year_hierarchy.year": {
+			          "Target": {
+			            "Entity": "start_date.year_hierarchy.year"
+			          }
+			        },
+			        "start_date.year_hierarchy.month": {
+			          "Target": {
+			            "Entity": "start_date.year_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "start_date.year_hierarchy.year"
+			            },
+			            "Object": {
+			              "Role": "start_date.year_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "years_have_months"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "start_date.year_hierarchy.month"
+			            },
+			            "Object": {
+			              "Role": "start_date.year_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "months_have_years"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "start_date.year_hierarchy.month"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "start_date.year_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "months_are_in_years"
+			        }
+			      ]
+			    },
+			    "start_date_year_hierarchy_month_has_start_date_year_hierarchy_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Start Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "start_date.year_hierarchy.month": {
+			          "Target": {
+			            "Entity": "start_date.year_hierarchy.month"
+			          }
+			        },
+			        "start_date.year_hierarchy.day": {
+			          "Target": {
+			            "Entity": "start_date.year_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "start_date.year_hierarchy.month"
+			            },
+			            "Object": {
+			              "Role": "start_date.year_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "months_have_days"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "start_date.year_hierarchy.day"
+			            },
+			            "Object": {
+			              "Role": "start_date.year_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "days_have_months"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "start_date.year_hierarchy.day"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "start_date.year_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "days_are_in_months"
 			        }
 			      ]
 			    }

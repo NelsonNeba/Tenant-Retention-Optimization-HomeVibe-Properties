@@ -52,7 +52,7 @@ table property_information
 		annotation SummarizationSetBy = Automatic
 
 	column 'Historical Occupancy rate Decimal' = property_information[Historical Occupancy Rate (%)]/100
-		formatString: 0%;-0%;0%
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 8156a4ee-98c9-494f-bed0-ec9b4df65905
 		summarizeBy: none
 
@@ -62,7 +62,7 @@ table property_information
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\Windows 10 Pro\Desktop\Data Analytics\Amdari\Tenant Retention Optimization Building an Interactive Power BI Dashboard for Residential Real Estate Excellence\property_information.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.Csv]),
+				    Source = Csv.Document(File.Contents("C:\Users\Nel\Desktop\Data Analytics\Amdari\Tenant-Retention-Optimization-HomeVibe-Properties-\Dataset\property_information.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.Csv]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Property ID", Int64.Type}, {"Property Name", type text}, {"Location", type text}, {"Property Type", type text}, {"Amenities", type text}, {"Historical Occupancy Rate (%)", Int64.Type}})
 				in

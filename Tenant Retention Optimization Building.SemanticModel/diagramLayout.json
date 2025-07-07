@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 77.51332309813921,
-        "y": 90.197321423289267
+        "x": 0,
+        "y": 107.25587567493962
       },
       "nodes": [
         {
           "location": {
             "x": 716.48311399995055,
-            "y": 556.90056176711221
+            "y": 1044.2655911255029
           },
           "nodeIndex": "property_information",
           "nodeLineageTag": "aa759acf-d384-43c3-b14b-91f9cf2f42fd",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 51.970581355286669,
-            "y": 605.09250310884818
+            "y": 1092.4575324672389
           },
           "nodeIndex": "tenant_information and Feedback",
           "nodeLineageTag": "675cd309-f9ec-4155-a4f4-9524b8015943",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 77.544647651026821,
-            "y": 926.67473525337641
+            "y": 1414.0397646117672
           },
           "nodeIndex": "Start Date",
           "size": {
@@ -49,7 +49,7 @@
         {
           "location": {
             "x": 698.85449593793953,
-            "y": 965.41756756246264
+            "y": 1452.7825969208534
           },
           "nodeIndex": "End Date",
           "nodeLineageTag": "889dc19a-0fff-4bdb-b590-42f1bbd765fc",
@@ -61,20 +61,8 @@
         },
         {
           "location": {
-            "x": 948.51253264466391,
-            "y": 389.89202348671262
-          },
-          "nodeIndex": "Measures Table",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
             "x": 407.58987108457893,
-            "y": 731.69617090584427
+            "y": 1219.0612002642351
           },
           "nodeIndex": "Fact_lease_details",
           "size": {
@@ -82,10 +70,22 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1180.5419512893773,
+            "y": 628.1817896529094
+          },
+          "nodeIndex": "Measures Table",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
-      "zoomValue": 70.955543900968848,
+      "zoomValue": 50.346892102823162,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

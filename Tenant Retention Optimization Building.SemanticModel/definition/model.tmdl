@@ -11,11 +11,11 @@ queryGroup 'Raw Data'
 
 	annotation PBI_QueryGroupOrder = 0
 
-annotation PBI_QueryOrder = ["Fact_lease_details","property_information","tenant_feedback","tenant_information and Feedback","lease_details (2)","property_information (2)","tenant_information (2)"]
+annotation PBI_QueryOrder = ["Fact_lease_details","property_information","tenant_feedback","tenant_information and Feedback","lease_details (2)","property_information (2)","tenant_information (2)","Measures Table"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.140.1577.0 (25.02)+00af0910c5ca19a229c472b0dfc17a2c488f6b0a
+annotation PBIDesktopVersion = 2.144.1378.0 (25.06)+cba1e61f16ea36d44901f06fa446299040122394
 
 annotation PBI_ProTooling = ["DevMode"]
 

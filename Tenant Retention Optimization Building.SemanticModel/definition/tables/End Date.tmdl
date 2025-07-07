@@ -54,11 +54,11 @@ table 'End Date'
 	column Month
 		formatString: 0
 		lineageTag: 1d05ea0b-124a-4981-ae02-c30d5f008e46
-		summarizeBy: sum
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Month]
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column Day
 		formatString: 0
@@ -74,6 +74,7 @@ table 'End Date'
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [MonthName]
+		sortByColumn: Month
 
 		annotation SummarizationSetBy = Automatic
 
@@ -91,6 +92,12 @@ table 'End Date'
 		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [WeekDay]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNameSorted = REPT(UNICHAR(0032), 'End Date'[Month] & 'End Date'[Month])
+		lineageTag: 534e5905-01b6-4928-b3af-54642034b38b
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 

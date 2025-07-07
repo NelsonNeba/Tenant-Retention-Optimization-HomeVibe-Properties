@@ -1,5 +1,191 @@
 table 'Measures Table'
-	lineageTag: 27f166ce-2032-4b0d-a1b1-a55f2c0d7725
+	lineageTag: 22710026-e0a2-492c-894d-0983b25c2a4c
+
+	measure 'Tenant Churn Rate (%)' = ```
+			
+			DIVIDE(
+			    [Number of Leases Ended],
+			    [Total Active Leases] + [Number of Leases Ended],
+			    0
+			)
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 7656bfad-3eed-4dae-9270-af4bf5aee4d2
+
+	measure 'Number of Leases Ended' =
+			
+			CALCULATE(
+			    COUNTROWS('Fact_Lease_Details'),
+			    'Fact_Lease_Details'[Lease End Date] <= TODAY()
+			)
+		formatString: 0
+		lineageTag: 7111193e-0103-4621-bb35-1923a257bd76
+
+	measure 'Total Active Leases' =
+			
+			CALCULATE(
+			    COUNTROWS('Fact_Lease_Details'),
+			    'Fact_Lease_Details'[Lease Start Date] <= TODAY() &&
+			    'Fact_Lease_Details'[Lease End Date] >= TODAY()
+			)
+		formatString: 0
+		lineageTag: 8266285f-86c4-4d4a-99af-220b6143675f
+
+	measure 'Lease Renewal Rate (%)' = ```
+			
+			DIVIDE(
+			    [Number of Renewed Leases],
+			    [Total Expiring Leases],
+			    0
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 4e5b7802-a71c-4e03-871d-c48fa460deb1
+
+	measure 'Number of Renewed Leases' = ```
+			
+			CALCULATE(
+			    COUNTROWS('Fact_Lease_Details'),
+			    'Fact_Lease_Details'[Is Renewed] = TRUE(),
+			    Fact_lease_details[Lease End Date] > TODAY()
+			)
+			
+			```
+		lineageTag: e06414a9-ffb3-46ae-bd01-01b47e69e81e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Expiring Leases' =
+			
+			CALCULATE(
+			    COUNTROWS('Fact_Lease_Details'),
+			    'Fact_Lease_Details'[Lease End Date] <= TODAY()
+			)
+		formatString: 0
+		lineageTag: d0ab44a6-dea2-4f92-a5f0-0476bde85fc6
+
+	measure 'Average Lease Duration (Months)' = ```
+			
+			AVERAGE('Fact_Lease_Details'[Lease Term (Months)])
+			
+			```
+		lineageTag: cb9f6d85-f0a5-4684-a36d-0468865280a7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Survey Response Rate (%)' = ```
+			
+			DIVIDE(
+			    [Number of Surveys Completed],
+			    [Total Number of Tenants],
+			    0
+			)
+			
+			```
+		lineageTag: 06dd5084-e2d5-4498-b930-bba86e3b965b
+
+	measure 'Number of Surveys Completed' =
+			
+			COUNTROWS('Tenant_information and feedback')
+		formatString: 0
+		lineageTag: eac1ffe1-7e4c-43f7-9468-20d2f2941561
+
+	measure 'Total Number of Tenants' =
+			
+			DISTINCTCOUNT('Fact_Lease_Details'[Lease ID])
+		formatString: 0
+		lineageTag: 6c394dfa-be93-46cf-83b4-23352da1b0b7
+
+	measure 'Average Satisfaction Score' = ```
+			
+			AVERAGE('Tenant_information and feedback'[Satisfaction Score])
+			
+			```
+		lineageTag: 4e34d67b-9ade-466a-a535-c52f2128d638
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Occupancy Rate (%)' = ```
+			
+			AVERAGE('Property_information'[Historical Occupancy Rate (%)])
+			
+			```
+		lineageTag: e32424ab-6de6-4cb5-aa66-bf1726979015
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Churn due to Maintenance Issues' = ```
+			
+			CALCULATE(
+			    COUNTROWS('Tenant_information and feedback'),
+			    SEARCH("maintenance", 'Tenant_information and feedback'[Comments],, 0) > 0
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 49486fdd-a920-4eb0-9e97-53b673bb2fc4
+
+	measure 'Leases Ended (This Month)' = ```
+			
+			CALCULATE(
+			    COUNTROWS('Fact_Lease_Details'),
+			    FILTER(
+			        'Fact_Lease_Details',
+			        EOMONTH('Fact_Lease_Details'[Lease End Date], 0) = EOMONTH(TODAY(), 0)
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 41ced28e-a739-42c0-943e-26be5794944d
+
+	measure 'Active Tenants (Start of Month)' = ```
+			
+			CALCULATE(
+			    COUNTROWS('Fact_Lease_Details'),
+			    FILTER(
+			        'Fact_Lease_Details',
+			        'Fact_Lease_Details'[Lease Start Date] <= EOMONTH(TODAY(), -1) &&
+			        'Fact_Lease_Details'[Lease End Date] >= DATE(YEAR(TODAY()), MONTH(TODAY()), 1)
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: b08ef299-6aa9-4aee-9590-8bc462e6db3b
+
+	measure 'Monthly Churn Rate (%)' = ```
+			
+			DIVIDE(
+			    [Leases Ended (This Month)],
+			    [Active Tenants (Start of Month)],
+			    0
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 7c5f71e5-45fb-4a8d-83dc-b3bca6936cde
+
+	measure 'Churned Leases' = ```
+			
+			VAR TodayDate = TODAY()
+			RETURN 
+			    CALCULATE(
+			        DISTINCTCOUNT(Fact_lease_details[Tenant ID]),
+			        Fact_lease_details[Lease End Date] <= TodayDate,
+			        NOT(ISBLANK(Fact_lease_details[Lease End Date]))  -- Exclude active tenants
+			    )
+			
+			```
+		formatString: 0
+		lineageTag: b3ba89f6-1d66-4e63-84de-d65369bc0e26
+
+	measure 'Average Rent' = AVERAGE(Fact_lease_details[Rent Amount (USD)] )
+		lineageTag: 8145d596-b942-4b78-a3dd-be94c2020933
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure Churn_Rate_Ended_Leases = ```
 			
@@ -23,37 +209,15 @@ table 'Measures Table'
 			
 			```
 		formatString: 0.0%;-0.0%;0.0%
-		lineageTag: eae77f63-67b9-4247-9343-2e4e129b784f
+		lineageTag: 1a2dd211-9baf-466c-92f7-5dcacd0eebaf
 
-	measure 'Average Rent' = AVERAGE(Fact_lease_details[Rent Amount (USD)] )
-		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
-		lineageTag: 039b88e7-e324-4f27-94ce-faa0b40bb55d
-
-	measure 'Total Expected Rent' = SUMX(Fact_lease_details,Fact_lease_details[Rent Amount (USD)] * Fact_lease_details[Lease Term (Months)]   )
-		formatString: 0
-		lineageTag: c5df446b-b997-40e3-8ada-942824bfc7f1
-
-	measure 'Total Payment History' = SUM(Fact_lease_details[Payment History (USD)])
-		formatString: 0
-		lineageTag: 75eeaa7b-0a44-4336-93cc-ffd3a4bc3626
-
-	measure 'Rent Collection Performance' = DIVIDE([Total Payment History],[Total Expected Rent])
-		formatString: 0%;-0%;0%
-		lineageTag: 542d3a8e-2268-477b-bb7e-97377f975417
-
-	measure 'Churned Leases' = ```
+	measure 'Renewal Rate' =
 			
-			VAR TodayDate = TODAY()
-			RETURN 
-			    CALCULATE(
-			        DISTINCTCOUNT(Fact_lease_details[Tenant ID]),
-			        Fact_lease_details[Lease End Date] <= TodayDate,
-			        NOT(ISBLANK(Fact_lease_details[Lease End Date]))  -- Exclude active tenants
-			    )
-			
-			```
-		formatString: 0
-		lineageTag: 38b5ed33-7d71-4630-a41d-35dacb918cf5
+			VAR ExpiredLeases = COUNTROWS(FILTER('Fact_lease_details', 'Fact_lease_details'[Lease End Date] < TODAY()))
+			VAR RenewedLeases = COUNTROWS(FILTER('Fact_lease_details', 'Fact_lease_details'[Lease End Date] >= TODAY()))
+			RETURN DIVIDE(RenewedLeases, ExpiredLeases + RenewedLeases, 0)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 4e05e622-d9f4-4aea-9902-3fb91fffdaaa
 
 	measure 'Renewed Leases' = ```
 			
@@ -70,32 +234,31 @@ table 'Measures Table'
 			
 			```
 		formatString: 0
-		lineageTag: 6bce0754-3645-462c-a8fc-f18190e78753
+		lineageTag: 1e617521-b6a5-433c-9445-12205c433e56
 
-	measure 'Renewal Rate' =
-			
-			VAR ExpiredLeases = COUNTROWS(FILTER('Fact_lease_details', 'Fact_lease_details'[Lease End Date] < TODAY()))
-			VAR RenewedLeases = COUNTROWS(FILTER('Fact_lease_details', 'Fact_lease_details'[Lease End Date] >= TODAY()))
-			RETURN DIVIDE(RenewedLeases, ExpiredLeases + RenewedLeases, 0)
-		formatString: 0.00%;-0.00%;0.00%
-		lineageTag: 0abefdbf-fb1e-414d-83e5-7ada8a0bef6d
+	measure 'Rent Collection Performance' = DIVIDE([Total Payment History],[Total Expected Rent])
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: d0733245-cf20-40a1-b830-c22a8ec55981
 
-	column DummyColumn
-		isHidden
-		lineageTag: 274cbe10-2e23-4426-9b95-9eb0fc81eb45
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: [DummyColumn]
+	measure 'Total Expected Rent' = SUMX(Fact_lease_details,Fact_lease_details[Rent Amount (USD)] * Fact_lease_details[Lease Term (Months)]   )
+		formatString: 0
+		lineageTag: 62626124-c442-4cab-9573-4b164cd88c8c
 
-		annotation SummarizationSetBy = Automatic
+	measure 'Total Payment History' = SUM(Fact_lease_details[Payment History (USD)])
+		formatString: 0
+		lineageTag: 3fd0f2ba-8dab-4eb6-b202-84feab039e54
 
-	partition 'Measures Table' = calculated
+	partition 'Measures Table' = m
 		mode: import
 		source =
-				DATATABLE(
-				    "DummyColumn",STRING,
-				    {{"DummyValue"}}
-				)
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
 
-	annotation PBI_Id = e7497a9064a34876a4d4fb6176b7f6b7
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
 

@@ -11,7 +11,7 @@ table 'Start Date'
 
 		variation Variation
 			isDefault
-			relationship: 6e0f0dfb-f4dc-4528-98aa-935ba86a6505
+			relationship: c51221a8-e931-4054-b281-9129fc19370f
 			defaultHierarchy: LocalDateTable_61ffcb5c-2017-4e18-a24f-644d9ef8f1d4.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
@@ -26,13 +26,14 @@ table 'Start Date'
 		annotation SummarizationSetBy = Automatic
 
 	column Month
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: 562dd81b-aadb-4996-8ee2-27e2a5c026f5
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Month]
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column Day
 		dataType: string
@@ -49,6 +50,7 @@ table 'Start Date'
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [MonthName]
+		sortByColumn: Month
 
 		annotation SummarizationSetBy = Automatic
 
@@ -93,8 +95,8 @@ table 'Start Date'
 				    "Year",YEAR([Date]),
 				    "Month",MONTH([Date]),
 				    "Day",DAY([Date]),
-				    "MonthName",FORMAT([Date],"mmmm"),
-				    "DayName",FORMAT([Date],"dddd"),
+				    "MonthName",FORMAT([Date],"mmm"),
+				    "DayName",FORMAT([Date],"ddd"),
 				    "WeekDay",WEEKDAY([Date],2)
 				)
 

@@ -77,11 +77,36 @@ table Fact_lease_details
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Is Renewed' = ```
+			
+			VAR LeaseStart = Fact_lease_details[Lease Start Date]
+			VAR LeaseEnd = Fact_lease_details[Lease End Date]
+			VAR LeaseTermMonths = Fact_lease_details[Lease Term (Months)]
+			
+			// Calculate actual duration in months
+			VAR ActualDurationMonths = 
+			    DATEDIFF(LeaseStart, LeaseEnd, MONTH)
+			
+			// Consider it renewed if actual duration exceeds original term
+			// Adding 1 month buffer to account for partial months
+			RETURN 
+			IF(
+			    ActualDurationMonths > LeaseTermMonths + 1,
+			    TRUE,
+			    FALSE
+			)
+			```
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 1790f498-7520-4640-a491-0c6bbb7dfb5c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Fact_lease_details = m
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\Windows 10 Pro\Desktop\Data Analytics\Amdari\Tenant Retention Optimization Building an Interactive Power BI Dashboard for Residential Real Estate Excellence\lease_details.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\Nel\Desktop\Data Analytics\Amdari\Tenant-Retention-Optimization-HomeVibe-Properties-\Dataset\lease_details.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Lease ID", Int64.Type}, {"Lease Start Date", type date}, {"Lease End Date", type date}, {"Lease Term (Months)", Int64.Type}, {"Rent Amount (USD)", Int64.Type}, {"Payment History (USD)", Int64.Type}, {"Property ID", Int64.Type}}),
 				    #"Merged Queries" = Table.NestedJoin(#"Changed Type", {"Lease Start Date", "Lease End Date"}, #"tenant_information and Feedback", {"Lease Start Date", "Lease End Date"}, "tenant_information and Feedback", JoinKind.LeftOuter),
@@ -90,9 +115,7 @@ table Fact_lease_details
 				in
 				    #"Reordered Columns"
 
-	changedProperty = Name
-
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 

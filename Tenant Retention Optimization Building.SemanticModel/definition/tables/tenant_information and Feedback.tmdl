@@ -83,16 +83,19 @@ table 'tenant_information and Feedback'
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Satisfaction Score' =
+	column 'Satisfaction Score' = ```
+			
 			SWITCH(
-			    TRUE(),
-			    'tenant_information and Feedback'[Survey Response] = "Very Satisfied", 5,
-			    'tenant_information and Feedback'[Survey Response] = "Satisfied",4,
-			    'tenant_information and Feedback'[Survey Response] = "Neutral", 3,
-			    'tenant_information and Feedback'[Survey Response] = "Dissatisfied",2,
-			    'tenant_information and Feedback'[Survey Response] = "Very Dissatisfied",1,
-			    0
+			    'Tenant_information and feedback'[Survey Response],
+			    "Very Dissatisfied", 1,
+			    "Dissatisfied", 2,
+			    "Neutral", 3,
+			    "Satisfied", 4,
+			    "Very Satisfied", 5,
+			    BLANK()
 			)
+			
+			```
 		formatString: 0
 		lineageTag: f0f3b0b6-f8cf-4429-84c7-0e73cd9a07f1
 		summarizeBy: sum
@@ -103,7 +106,7 @@ table 'tenant_information and Feedback'
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\Windows 10 Pro\Desktop\Data Analytics\Amdari\Tenant Retention Optimization Building an Interactive Power BI Dashboard for Residential Real Estate Excellence\tenant_information.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\Nel\Desktop\Data Analytics\Amdari\Tenant-Retention-Optimization-HomeVibe-Properties-\Dataset\tenant_information.csv"),[Delimiter=",", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Tenant ID", Int64.Type}, {"Tenant Name", type text}, {"Contact Details", type text}, {"Lease Start Date", type date}, {"Lease End Date", type date}}),
 				    #"Merged Queries" = Table.NestedJoin(#"Changed Type", {"Tenant ID"}, tenant_feedback, {"Tenant ID"}, "tenant_feedback", JoinKind.LeftOuter),
